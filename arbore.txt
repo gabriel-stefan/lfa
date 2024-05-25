@@ -1,1 +1,0 @@
-Un arbore este un graf neorientat, conex si aciclit

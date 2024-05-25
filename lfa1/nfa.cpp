@@ -44,7 +44,7 @@ void citire()
     fin >> nrCuv;
 }
 
-bool dfs(int stare, const string& cuv, int pos)
+bool dfs(int stare, string cuv, int pos)
 {
     if(pos == cuv.size()) 
     {
@@ -64,10 +64,7 @@ bool dfs(int stare, const string& cuv, int pos)
     {
         if(tranzitie.second == cuv[pos]) 
         {
-            if(dfs(tranzitie.first, cuv, pos + 1))
-            {
-                return true;
-            }
+            return dfs(tranzitie.first, cuv, pos + 1);
         }
     }
 }
